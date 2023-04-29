@@ -15,5 +15,10 @@ There should be a uniform url and HTTP request method used to utilize that colle
 | /users/23 | PUT | Update details of user with ID 23 |
 | /users/23 | DELETE | Delete user with ID 23 |
 
+## The relationship of MySQL 
 
 <img src="./images/relationship.png">
+
+## Using a diagram to represent the structure of a database relationship
+
+<img src="./images/graphql.png">
