@@ -15,3 +15,5 @@ There should be a uniform url and HTTP request method used to utilize that colle
 | /users/23 | PUT | Update details of user with ID 23 |
 | /users/23 | DELETE | Delete user with ID 23 |
 
+
+<img src="./images/relationship.png">
