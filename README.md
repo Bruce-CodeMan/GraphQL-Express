@@ -50,3 +50,12 @@ app.listen(port, () => {
 ```
 node server.js
 ```
+
+## Using [json-server](https://github.com/typicode/json-server) to generate the data
+
+```
+pnpm i -s json-server
+```
+
+<img src="./images/json_server.png">
+
