@@ -7,7 +7,8 @@ const {
     GraphQLSchema,
     GraphQLString,
     GraphQLInt,
-    GraphQLList
+    GraphQLList,
+    GraphQLNonNull
 } = graphql;
 
 const CompanyType = new GraphQLObjectType({
@@ -42,6 +43,47 @@ const UserType = new GraphQLObjectType({
     })
 })
 
+const mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields: {
+        addUser: {
+            type: UserType,
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) },
+                age: { type: new GraphQLNonNull(GraphQLInt) },
+                companyId: { type: GraphQLString }
+            },
+            resolve(_, { name, age, companyId }) {
+                return axios.post('http://localhost:3000/users', { name, age, companyId })
+                    .then(resp => resp.data)
+            }
+        },
+        deleteUser: {
+            type: UserType,
+            args: {
+                id: { type: new GraphQLNonNull(GraphQLString) }
+            },
+            resolve(_, args) {
+                return axios.delete(`http://localhost:3000/users/${args.id}`)
+                        .then(resp => resp.data)
+            }
+        },
+        updateUser: {
+            type: UserType,
+            args: {
+                id: { type: new GraphQLNonNull(GraphQLString) },
+                name: { type: GraphQLString },
+                age: { type: GraphQLInt },
+                companyId: { type: GraphQLString }
+            },
+            resolve(_, args) {
+                return axios.put(`http://localhost:3000/users/${args.id}`, args)
+                        .then(resp => resp.data)
+            }
+        }
+    }
+})
+
 const RootQuery = new GraphQLObjectType({
     name: 'RootQuery',
     fields: {
@@ -65,5 +107,6 @@ const RootQuery = new GraphQLObjectType({
 })
 
 module.exports = new GraphQLSchema({
-    query: RootQuery
+    query: RootQuery,
+    mutation
 })

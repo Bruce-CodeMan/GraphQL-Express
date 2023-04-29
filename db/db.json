@@ -1,11 +1,31 @@
 {
-    "users": [
-        {"id": "1", "name": "Bruce Hsu", "age": 18, "companyId": "1"},
-        {"id": "2", "name": "James", "age": 35, "companyId": "2"},
-        {"id": "3", "name": "Lily", "age": 25, "companyId": "2"}
-    ],
-    "companies": [
-        {"id": "1", "name": "Apple", "description": "iphone"},
-        {"id": "2", "name": "Tesla", "description": "car"}
-    ]
+  "users": [
+    {
+      "id": "2",
+      "name": "Lebron"
+    },
+    {
+      "id": "3",
+      "name": "Lily",
+      "age": 25,
+      "companyId": "2"
+    },
+    {
+      "name": "Mode",
+      "age": 44,
+      "id": "pgvtiiU"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "iphone"
+    },
+    {
+      "id": "2",
+      "name": "Tesla",
+      "description": "car"
+    }
+  ]
 }
