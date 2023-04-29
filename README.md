@@ -59,3 +59,6 @@ pnpm i -s json-server
 
 <img src="./images/json_server.png">
 
+## Query Results on the GraphiQL
+
+<img src="./images/queryResult.png">
