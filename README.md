@@ -22,3 +22,9 @@ There should be a uniform url and HTTP request method used to utilize that colle
 ## Using a diagram to represent the structure of a database relationship
 
 <img src="./images/graphql.png">
+
+## Install Express & GraphQL packages
+
+```
+pnpm i -s express express-graphql graphql lodash
+```
