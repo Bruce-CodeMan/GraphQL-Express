@@ -29,7 +29,7 @@ There should be a uniform url and HTTP request method used to utilize that colle
 pnpm i -s express express-graphql graphql lodash
 ```
 
-## How to build express
+## How to build express named server.js
 
 ```
 const express = require('express')
@@ -43,4 +43,10 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
+```
+
+## Starting this example app
+
+```
+node server.js
 ```
